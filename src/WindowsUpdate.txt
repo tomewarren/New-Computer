@@ -1,0 +1,9 @@
+# Allow reboots
+  $Boxstarter.RebootOk=$true
+  $Boxstarter.NoPassword=$false
+  $Boxstarter.AutoLogin=$true
+
+# Update Windows and reboot if necessary
+  Install-WindowsUpdate -GetUpdatesFromMS -AcceptEula -criteria "IsAssigned=1 and IsHidden=0 and IsInstalled=0"
+
+if (Test-PendingReboot) { Invoke-Reboot }

@@ -1,0 +1,37 @@
+# Development
+	cinst python2 -y
+	cinst Atom -y
+	cinst notepadplusplus -y
+	cinst winmerge -y
+	cinst PowerGUI -y
+
+# Utilities
+	cinst adobereader -y
+	cinst hashcheck -y
+	cinst paint.net -y
+	cinst putty.install -y
+	cinst windirstat -y
+	cinst winscp -y
+	cinst dropbox -y
+	cinst evernote -y
+	cinst lastpass -y
+
+# Runtimes
+	cinst javaruntime -y
+	cinst vcredist2015 -y
+
+# Personalization
+	cinst notepadplusplus.settings -y -params 'url=https://raw.githubusercontent.com/iRobie/notepadplusplussettings/master/' -Force
+	Move-LibraryDirectory "Personal" "$env:UserProfile\Dropbox"
+
+	Install-ChocolateyPinnedTaskBarItem "$($Boxstarter.programFiles86)\Google\Chrome\Application\chrome.exe"
+
+
+	# Apply tweaks - remove onedrive, remove bing stuff
+	if(!(Test-Path -Path "C:\tools\" )){
+		New-Item -ItemType directory -Path "c:\tools\"
+	}
+	Invoke-WebRequest 'https://gist.githubusercontent.com/iRobie/5e620a9987ff1ae618b4/raw' -OutFile 'C:\tools\Win10tweaks.bat'
+	start-process C:\tools\Win10tweaks.bat
+
+if (Test-PendingReboot) { Invoke-Reboot }

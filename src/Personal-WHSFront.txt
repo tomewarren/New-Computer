@@ -1,0 +1,19 @@
+# File Renamer
+	cinst ant-renamer -y
+
+# Development
+	cinst sourcetree -y
+	cinst cmder -y
+	cinst github -y
+
+# Digital entertainment
+	cinst calibre -y
+	cinst handbrake.install -y
+	choco install mediatab -y # Media info in properties
+	cinst mpc-hc -y
+	cinst QuickPar -y
+
+# Utilities
+	cinst sandboxie -y
+	cinst tightvnc -y
+	cinst you-need-a-budget -y

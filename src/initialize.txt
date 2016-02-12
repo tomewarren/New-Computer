@@ -1,0 +1,11 @@
+# Allow reboots
+  $Boxstarter.RebootOk=$true
+  $Boxstarter.NoPassword=$false
+  $Boxstarter.AutoLogin=$true
+
+# Basic setup
+  Update-ExecutionPolicy Unrestricted
+  Set-ExplorerOptions -showFileExtensions
+  Enable-RemoteDesktop
+
+if (Test-PendingReboot) { Invoke-Reboot }

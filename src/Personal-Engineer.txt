@@ -1,0 +1,10 @@
+
+# Utilities
+	cinst fiddler4 -y
+	cinst greenshot -y
+	cinst rdcman -y
+	cinst teamviewer -y
+	cinst sql2008r2.cmdline -y
+	cinst vmwarevsphereclient -y
+
+if (Test-PendingReboot) { Invoke-Reboot }
