@@ -5,7 +5,7 @@
 
 # Basic setup
   Update-ExecutionPolicy Unrestricted
-  Set-ExplorerOptions -showFileExtensions
+  Set-WindowsExplorerOptions -showFileExtensions
   Enable-RemoteDesktop
 
 if (Test-PendingReboot) { Invoke-Reboot }
