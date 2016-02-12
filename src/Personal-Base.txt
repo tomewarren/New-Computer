@@ -31,7 +31,7 @@
 	if(!(Test-Path -Path "C:\tools\" )){
 		New-Item -ItemType directory -Path "c:\tools\"
 	}
-	Invoke-WebRequest 'https://gist.githubusercontent.com/iRobie/5e620a9987ff1ae618b4/raw' -OutFile 'C:\tools\Win10tweaks.bat'
+	Invoke-WebRequest 'https://raw.githubusercontent.com/iRobie/New-Computer/master/src/Windows10Tweaks.bat' -OutFile 'C:\tools\Win10tweaks.bat'
 	start-process C:\tools\Win10tweaks.bat
 
 if (Test-PendingReboot) { Invoke-Reboot }
