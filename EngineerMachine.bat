@@ -31,3 +31,6 @@ powershell
 
 ## Run the boxstarter file
 START http://boxstarter.org/package/nr/url?$BoxstarterFile
+
+## List of manual installs
+# Microsoft Office 365 Support and Recovery Assistant
