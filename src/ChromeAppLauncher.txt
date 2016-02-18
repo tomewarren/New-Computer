@@ -1,0 +1,11 @@
+# For now, this is manual steps
+
+# Option 1 -
+# Follow directions here: https://support.google.com/chrome_webstore/answer/3060053?p=cws_app_launcher&rd=1&hl=en
+# Install a web app
+# That adds Chrome launcher under Start - Google Chrome - Chrome App Launcher
+# Add shortcut to start menu or taskbar
+
+# In the future, here's what that icon is:
+# "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --show-app-list
+# Icon is %ProgramFiles(x86)%\Google\Chrome\Application\chrome.exe, number 3 or 4?
