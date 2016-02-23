@@ -32,6 +32,8 @@ REM PowerShell -Command "Get-AppxPackage *WindowsMaps* | Remove-AppxPackage"
 sc config "HomeGroupProvider" start= disabled
 sc stop "HomeGroupProvider"
 
+REM *** Stop RDC Cert complaints ***
+reg add "HKEY_CURRENT_USER\Software\Microsoft\Terminal Server Client" /v "AuthenticationLevelOverride" /t REG_DWORD /d 0 /f
 
 REM *** Uninstall OneDrive ***
 start /wait "" "%SYSTEMROOT%\SYSWOW64\ONEDRIVESETUP.EXE" /UNINSTALL
