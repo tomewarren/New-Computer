@@ -17,3 +17,12 @@
 	cinst sandboxie -y
 	cinst tightvnc -y
 	cinst you-need-a-budget -y
+
+	# Apply tweaks - PATH variables
+	if(!(Test-Path -Path "C:\tools\" )){
+		New-Item -ItemType directory -Path "c:\tools\"
+	}
+	Invoke-WebRequest 'https://raw.githubusercontent.com/iRobie/New-Computer/master/src/Personal-WHSFront-Tweaks.ps1' -OutFile 'C:\tools\Personal-WHSFront-Tweaks.ps1'
+	&  'C:\tools\Personal-WHSFront-Tweaks.ps1'
+
+	if (Test-PendingReboot) { Invoke-Reboot }
