@@ -34,3 +34,4 @@ START http://boxstarter.org/package/nr/url?$BoxstarterFile
 
 ## List of manual installs
 # Microsoft Office 365 Support and Recovery Assistant
+# Dism /online /enable-feature /featurename:NetFx3 /All /Source:E:\sources\sxs /LimitAccess
