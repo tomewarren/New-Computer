@@ -10,24 +10,6 @@ REM *** Set Windows Explorer to start on This PC instead of Quick Access ***
 REM 1 = This PC, 2 = Quick access
 reg add "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "LaunchTo" /t REG_DWORD /d 1 /f
 
-@rem Remove Apps
-PowerShell -Command "Get-AppxPackage *3DBuilder* | Remove-AppxPackage"
-PowerShell -Command "Get-AppxPackage *Getstarted* | Remove-AppxPackage"
-PowerShell -Command "Get-AppxPackage *WindowsAlarms* | Remove-AppxPackage"
-PowerShell -Command "Get-AppxPackage *WindowsCamera* | Remove-AppxPackage"
-PowerShell -Command "Get-AppxPackage *MicrosoftOfficeHub* | Remove-AppxPackage"
-PowerShell -Command "Get-AppxPackage *OneNote* | Remove-AppxPackage"
-PowerShell -Command "Get-AppxPackage *people* | Remove-AppxPackage"
-PowerShell -Command "Get-AppxPackage *WindowsPhone* | Remove-AppxPackage"
-PowerShell -Command "Get-AppxPackage *photos* | Remove-AppxPackage"
-PowerShell -Command "Get-AppxPackage *SkypeApp* | Remove-AppxPackage"
-PowerShell -Command "Get-AppxPackage *solit* | Remove-AppxPackage"
-PowerShell -Command "Get-AppxPackage *WindowsSoundRecorder* | Remove-AppxPackage"
-PowerShell -Command "Get-AppxPackage *xbox* | Remove-AppxPackage"
-PowerShell -Command "Get-AppxPackage *zune* | Remove-AppxPackage"
-REM PowerShell -Command "Get-AppxPackage *WindowsCalculator* | Remove-AppxPackage"
-REM PowerShell -Command "Get-AppxPackage *WindowsMaps* | Remove-AppxPackage"
-
 @rem Remove Homegroup
 sc config "HomeGroupProvider" start= disabled
 sc stop "HomeGroupProvider"
