@@ -58,3 +58,9 @@ if (Test-PendingReboot) { Invoke-Reboot }
     New-Symlink -LiteralPath "$env:USERPROFILE\Documents\Dropbox" -TargetPath "$env:UserProfile\Dropbox"
     New-Symlink -LiteralPath "$env:USERPROFILE\Documents\WindowsPowerShell\Modules" -TargetPath "$env:UserProfile\Dropbox\Programs\Scripts\Templates"
     
+## Reduce Windows SXS size
+	if(!(Test-Path -Path "C:\tools\" )){
+		New-Item -ItemType directory -Path "c:\tools\"
+	}
+	Invoke-WebRequest 'https://github.com/iRobie/New-Computer/blob/master/src/Windows-DeflatSxS.bat' -OutFile 'C:\tools\Windows-DeflatSxS.bat'
+	start-process C:\tools\Windows-DeflatSxS.bat
