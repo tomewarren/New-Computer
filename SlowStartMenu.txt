@@ -1,0 +1,7 @@
+Manual fix for now.
+Start -> Settings -> Personalization -> Start
+Disable
+- Show more tiles
+- Occasionally show suggestions in Start
+- Show recently added apps
+- Use full screen
