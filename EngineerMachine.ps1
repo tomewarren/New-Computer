@@ -1,4 +1,4 @@
-:: Run this in an admin powershell Window
+# Run this in an admin powershell Window
 
 ## Concat Boxstarter files to a local file
 
