@@ -42,6 +42,18 @@
 
 if (Test-PendingReboot) { Invoke-Reboot }
 
+# Remove Modern apps
+	Invoke-WebRequest 'https://raw.githubusercontent.com/bmrf/tron/master/resources/stage_2_de-bloat/metro/metro_3rd_party_modern_apps_to_target_by_name.ps1' -OutFile 'C:\tools\metro_3rd_party_modern_apps_to_target_by_name.ps1'
+	Invoke-WebRequest 'https://raw.githubusercontent.com/bmrf/tron/master/resources/stage_2_de-bloat/metro/metro_Microsoft_modern_apps_to_target_by_name.ps1' -OutFile 'C:\tools\metro_Microsoft_modern_apps_to_target_by_name.ps1'
+	& "C:\tools\metro_Microsoft_modern_apps_to_target_by_name.ps1"
+	& "C:\tools\metro_3rd_party_modern_apps_to_target_by_name.ps1"
+	
+	if(!(Test-Path -Path "C:\tools\" )){
+		New-Item -ItemType directory -Path "c:\tools\"
+	}
+	Invoke-WebRequest 'https://raw.githubusercontent.com/iRobie/New-Computer/master/src/Windows10Tweaks.bat' -OutFile 'C:\tools\Win10tweaks.bat'
+	start-process C:\tools\Win10tweaks.bat
+
 ## Create Symbolic Links
     New-Symlink -LiteralPath "$env:USERPROFILE\Documents\Dropbox" -TargetPath "$env:UserProfile\Dropbox"
     New-Symlink -LiteralPath "$env:USERPROFILE\Documents\WindowsPowerShell\Modules" -TargetPath "$env:UserProfile\Dropbox\Programs\Scripts\Templates"
