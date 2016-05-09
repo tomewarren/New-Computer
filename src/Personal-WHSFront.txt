@@ -16,7 +16,7 @@
 # Utilities
 	cinst sandboxie -y
 	cinst tightvnc -y
-	cinst you-need-a-budget -y
+	cinst btsync -y
 
 	# Apply tweaks - PATH variables
 	if(!(Test-Path -Path "C:\tools\" )){
