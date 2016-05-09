@@ -15,7 +15,9 @@
 	cinst dropbox -y
 	cinst evernote -y
 	cinst lastpass -y
-
+	cinst pushbullet -y
+	cinst sysinternals -y
+	
 # Runtimes
 	cinst javaruntime -y
 	cinst vcredist2015 -y
@@ -26,8 +28,13 @@
 
 	Install-ChocolateyPinnedTaskBarItem "$($Boxstarter.programFiles86)\Google\Chrome\Application\chrome.exe"
 
+# Disable System Restore
+    disable-computerrestore -drive "C:\"
+    
+# Disable hibernate
+    powershell -Command "Start-Process 'powercfg.exe' -Verb runAs -ArgumentList '/h off'"
 
-	# Apply tweaks - remove onedrive, remove bing stuff
+# Apply tweaks - remove onedrive, remove bing stuff
 	if(!(Test-Path -Path "C:\tools\" )){
 		New-Item -ItemType directory -Path "c:\tools\"
 	}
