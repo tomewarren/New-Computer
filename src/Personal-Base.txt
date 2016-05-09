@@ -24,7 +24,6 @@
 
 # Personalization
 	cinst notepadplusplus.settings -y -params 'url=https://raw.githubusercontent.com/iRobie/notepadplusplussettings/master/' -Force
-	Move-LibraryDirectory "Personal" "$env:UserProfile\Dropbox"
 
 	Install-ChocolateyPinnedTaskBarItem "$($Boxstarter.programFiles86)\Google\Chrome\Application\chrome.exe"
 
@@ -42,3 +41,8 @@
 	start-process C:\tools\Win10tweaks.bat
 
 if (Test-PendingReboot) { Invoke-Reboot }
+
+## Create Symbolic Links
+    New-Symlink -LiteralPath "$env:USERPROFILE\Documents\Dropbox" -TargetPath "$env:UserProfile\Dropbox"
+    New-Symlink -LiteralPath "$env:USERPROFILE\Documents\WindowsPowerShell\Modules" -TargetPath "$env:UserProfile\Dropbox\Programs\Scripts\Templates"
+    
