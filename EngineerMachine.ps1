@@ -20,7 +20,8 @@
   "https://raw.githubusercontent.com/iRobie/New-Computer/master/src/WindowsUpdate.txt",
   "https://raw.githubusercontent.com/iRobie/New-Computer/master/src/Basic-Computer.txt",
   "https://raw.githubusercontent.com/iRobie/New-Computer/master/src/Personal-Base.txt",
-  "https://raw.githubusercontent.com/iRobie/New-Computer/master/src/Personal-Engineer.txt"
+  "https://raw.githubusercontent.com/iRobie/New-Computer/master/src/Personal-Engineer.txt",
+  "https://raw.githubusercontent.com/iRobie/New-Computer/master/src/Finalize.txt"
   )
 
   # Generate boxstarter file
