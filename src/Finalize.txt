@@ -1,0 +1,9 @@
+## Reduce Windows SXS size
+	if(!(Test-Path -Path "C:\tools\" )){
+		New-Item -ItemType directory -Path "c:\tools\"
+	}
+	Invoke-WebRequest 'https://raw.githubusercontent.com/iRobie/New-Computer/master/src/Windows-DeflatSxS.bat' -OutFile 'C:\tools\Windows-DeflatSxS.bat'
+	start-process C:\tools\Windows-DeflatSxS.bat
+
+## Reboot if needed
+if (Test-PendingReboot) { Invoke-Reboot }
