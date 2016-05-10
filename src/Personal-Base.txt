@@ -40,11 +40,11 @@
 	Invoke-WebRequest 'https://raw.githubusercontent.com/iRobie/New-Computer/master/src/Windows10Tweaks.bat' -OutFile 'C:\tools\Win10tweaks.bat'
 	start-process C:\tools\Win10tweaks.bat
 
-if (Test-PendingReboot) { Invoke-Reboot }
 
 # Remove Modern apps
 	Invoke-WebRequest 'https://raw.githubusercontent.com/bmrf/tron/master/resources/stage_2_de-bloat/metro/metro_3rd_party_modern_apps_to_target_by_name.ps1' -OutFile 'C:\tools\metro_3rd_party_modern_apps_to_target_by_name.ps1'
 	Invoke-WebRequest 'https://raw.githubusercontent.com/bmrf/tron/master/resources/stage_2_de-bloat/metro/metro_Microsoft_modern_apps_to_target_by_name.ps1' -OutFile 'C:\tools\metro_Microsoft_modern_apps_to_target_by_name.ps1'
+	
 	# Remove illegal dashes
 	(Get-Content C:\tools\metro_Microsoft_modern_apps_to_target_by_name.ps1 -Encoding UTF8).replace('[\u2012\u2013\u2014]', '-') | Set-Content C:\tools\metro_Microsoft_modern_apps_to_target_by_name.ps1
 	(Get-Content C:\tools\metro_3rd_party_modern_apps_to_target_by_name.ps1 -Encoding UTF8).replace('[\u2012\u2013\u2014]', '-') | Set-Content C:\tools\metro_3rd_party_modern_apps_to_target_by_name.ps1
