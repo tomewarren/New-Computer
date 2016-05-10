@@ -7,5 +7,3 @@
 	cinst sql2008r2.cmdline -y
 	cinst vmwarevsphereclient -y
 	cinst btsync -y
-
-if (Test-PendingReboot) { Invoke-Reboot }
