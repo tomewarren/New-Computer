@@ -32,3 +32,4 @@ START http://boxstarter.org/package/nr/url?$BoxstarterFile
 ## List of manual installs
 # Microsoft Office 365 Support and Recovery Assistant
 # Dism /online /enable-feature /featurename:NetFx3 /All /Source:E:\sources\sxs /LimitAccess
+# . { iwr -UseBasicParsing https://raw.githubusercontent.com/adamedx/winbox/0.1.79/files/default/install.ps1 } | iex;install-workstation  ## From https://github.com/adamedx/winbox
