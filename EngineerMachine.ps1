@@ -1,4 +1,8 @@
 # Run this in an admin powershell Window
+# Step 1 - Manual step - set shared rive server to 127.0.0.1 in hosts file
+# Step 2 - Admin powershell: . { iwr -UseBasicParsing https://raw.githubusercontent.com/adamedx/winbox/0.1.79/files/default/install.ps1 } | iex;install-workstation  ## From https://github.com/adamedx/winbox
+# Step 3 - Copy the winbox-ps-shell from above location to user profile
+# Step 4 - Now run the below
 
 ## Concat Boxstarter files to a local file
 
@@ -32,4 +36,3 @@ START http://boxstarter.org/package/nr/url?$BoxstarterFile
 ## List of manual installs
 # Microsoft Office 365 Support and Recovery Assistant
 # Dism /online /enable-feature /featurename:NetFx3 /All /Source:E:\sources\sxs /LimitAccess
-# . { iwr -UseBasicParsing https://raw.githubusercontent.com/adamedx/winbox/0.1.79/files/default/install.ps1 } | iex;install-workstation  ## From https://github.com/adamedx/winbox
