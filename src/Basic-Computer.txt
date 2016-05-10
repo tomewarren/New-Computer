@@ -2,11 +2,8 @@
   cinst DotNet3.5 -y
   cinst dotnet4.5 -y
 
-if (Test-PendingReboot) { Invoke-Reboot }
-
 #Core utilities
   cinst googlechrome -y
   cinst 7zip.install -y
   cinst notepadplusplus -y
-
-if (Test-PendingReboot) { Invoke-Reboot }
+  
