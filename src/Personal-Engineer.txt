@@ -7,13 +7,5 @@
 	cinst sql2008r2.cmdline -y
 	cinst vmwarevsphereclient -y
 	cinst btsync -y
-	cinst cmder -y
-	
-## Cmder
-    Remove-Item -Path "$env:CMDER_ROOT\config" -Force -Recurse
-    New-Symlink -LiteralPath "$env:CMDER_ROOT\config" -TargetPath "$env:UserProfile\Dropbox\Cmder\config"
-    Remove-Item -Path "$env:CMDER_ROOT\vendor" -Force -Recurse
-    New-Symlink -LiteralPath "$env:CMDER_ROOT\vendor" -TargetPath "$env:UserProfile\Dropbox\Cmder\vendor"
-
 
 if (Test-PendingReboot) { Invoke-Reboot }
