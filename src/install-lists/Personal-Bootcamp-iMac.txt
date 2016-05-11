@@ -1,0 +1,10 @@
+
+# Disable System Restore
+    disable-computerrestore -drive "C:\"
+
+# Disable hibernate
+    powershell -Command "Start-Process 'powercfg.exe' -Verb runAs -ArgumentList '/h off'"
+
+# Game stuff
+	cinst steam -y
+  cinst geforce-driver -y

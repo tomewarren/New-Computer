@@ -1,5 +1,0 @@
-# Game stuff
-	cinst steam -y
-  cinst geforce-driver -y
-
-	if (Test-PendingReboot) { Invoke-Reboot }

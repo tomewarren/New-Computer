@@ -1,9 +1,16 @@
+
+# Disable System Restore
+    disable-computerrestore -drive "C:\"
+
+# Disable hibernate
+    powershell -Command "Start-Process 'powercfg.exe' -Verb runAs -ArgumentList '/h off'"
+
+
 # File Renamer
 	cinst ant-renamer -y
 
 # Development
 	cinst sourcetree -y
-	cinst cmder -y
 	cinst github -y # Caused problems once. Remove if this happens again
 
 # Digital entertainment
@@ -22,7 +29,5 @@
 	if(!(Test-Path -Path "C:\tools\" )){
 		New-Item -ItemType directory -Path "c:\tools\"
 	}
-	Invoke-WebRequest 'https://raw.githubusercontent.com/iRobie/New-Computer/master/src/Personal-WHSFront-Tweaks.ps1' -OutFile 'C:\tools\Personal-WHSFront-Tweaks.ps1'
+	Invoke-WebRequest 'https://raw.githubusercontent.com/iRobie/New-Computer/master/src/tweaks/Personal-WHSFront-Tweaks.ps1' -OutFile 'C:\tools\Personal-WHSFront-Tweaks.ps1'
 	&  'C:\tools\Personal-WHSFront-Tweaks.ps1'
-
-	if (Test-PendingReboot) { Invoke-Reboot }
