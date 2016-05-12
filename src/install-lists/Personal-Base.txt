@@ -1,9 +1,7 @@
 ## These are files I use regardless of what computer I'm on
 # Development
 	cinst python2 -y
-	#cinst Atom -y
 	cinst visualstudiocode -y
-	cinst openinvscode -y
 	cinst notepadplusplus -y
 	cinst winmerge -y
 	cinst PowerGUI -y
@@ -12,9 +10,9 @@
 	cinst adobereader -y
 	cinst hashcheck -y
 	cinst paint.net -y
-	cinst putty.install -y
 	cinst windirstat -y
 	cinst winscp -y
+	cinst putty.install -y
 	cinst dropbox -y
 	cinst evernote -y
 	cinst lastpass -y
@@ -23,22 +21,13 @@
 
 # Runtimes
 	cinst javaruntime -y
+	cinst vcredist2010 -y
 	cinst vcredist2015 -y
-
-# Powershell enhancements
-	cinst conemu -y
-	cinst psget -y
-	cinst poshgit -y
-	Install-Module PSReadline # Probaby won't work if psget was just installed
 
 ## Personalization
 	cinst notepadplusplus.settings -y -params 'url=https://raw.githubusercontent.com/iRobie/notepadplusplussettings/master/' -Force
 
 	Install-ChocolateyPinnedTaskBarItem "$($Boxstarter.programFiles86)\Google\Chrome\Application\chrome.exe"
-
-	# Conemu settings
-	Invoke-WebRequest 'https://raw.githubusercontent.com/iRobie/New-Computer/master/src/settings/ConEmu.xml' -OutFile 'C:\Program Files\ConEmu\ConEmu.xml'
-
 
 	# Apply personalization tweaks
 		if(!(Test-Path -Path "C:\tools\" )){
@@ -67,15 +56,3 @@
 	  Invoke-WebRequest 'https://raw.githubusercontent.com/iRobie/New-Computer/master/src/tweaks/Create-Symlinks.bat' -OutFile 'C:\tools\Create-Symlinks.bat'
 	  start-process C:\tools\Create-Symlinks.bat -NoNewWindow -Wait
 
-	# Powershell Profile
-		# Command to create a PowerShell profile
-		if(!(Test-Path $Profile )){
-			New-Item -path $profile -type file -force
-		}
-		$userprofile = $env:USERPROFILE
-		Invoke-WebRequest 'https://raw.githubusercontent.com/iRobie/New-Computer/master/src/settings/winbox-ps-profile.ps1' -OutFile (Join-Path $userprofile 'winbox-ps-profile.ps1')
-		Invoke-WebRequest 'https://raw.githubusercontent.com/iRobie/New-Computer/master/src/settings/get-help-full.ps1' -OutFile (Join-Path $userprofile 'get-help-full.ps1')
-		Invoke-WebRequest 'https://raw.githubusercontent.com/iRobie/New-Computer/master/src/settings/set-location-docs.ps1' -OutFile (Join-Path $userprofile 'set-location-docs.ps1')
-
-		Add-Content $profile '. ~/winbox-ps-profile.ps1'
-		Add-Content $profile 'Import-Module PSReadLine'
