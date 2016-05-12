@@ -7,7 +7,3 @@
   Install-WindowsUpdate -GetUpdatesFromMS -AcceptEula -criteria "IsAssigned=1 and IsHidden=0 and IsInstalled=0"
 
 if (Test-PendingReboot) { Invoke-Reboot }
-
-# Create symbolic links
-  Invoke-WebRequest 'https://raw.githubusercontent.com/iRobie/New-Computer/master/src/tweaks/Windows-DeflatSxS.bat' -OutFile 'C:\tools\Windows-DeflatSxS.bat'
-  start-process C:\tools\Windows-DeflatSxS.bat -NoNewWindow -Wait
