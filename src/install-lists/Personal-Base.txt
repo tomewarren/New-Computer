@@ -16,7 +16,6 @@
 	cinst dropbox -y
 	cinst evernote -y
 	cinst lastpass -y
-	cinst pushbullet -y
 	cinst sysinternals -y
 
 # Runtimes
