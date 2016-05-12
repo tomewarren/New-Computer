@@ -1,4 +1,8 @@
 ## These are files I use regardless of what computer I'm on
+# Upgrade Chocolatey
+        cinst chocolatey -y
+        choco upgrade chocolatey -y
+        
 # Development
 	cinst python2 -y
 	cinst visualstudiocode -y
@@ -33,11 +37,11 @@
 			New-Item -ItemType directory -Path "c:\tools\"
 		}
 		Invoke-WebRequest 'https://raw.githubusercontent.com/iRobie/New-Computer/master/src/tweaks/Windows10Tweaks.bat' -OutFile 'C:\tools\Win10tweaks.bat'
-		start-process C:\tools\Win10tweaks.bat -NoNewWindow -Wait
+		start-process C:\tools\Win10tweaks.bat -Wait
 
 	# Remove Onedrive
 	  Invoke-WebRequest 'https://raw.githubusercontent.com/iRobie/New-Computer/master/src/tweaks/Remove-Onedrive.bat' -OutFile 'C:\tools\Remove-Onedrive.bat'
-	  start-process C:\tools\Remove-Onedrive.bat -NoNewWindow -Wait
+	  start-process C:\tools\Remove-Onedrive.bat -Wait
 
 	# Remove Modern apps
 		Invoke-WebRequest 'https://raw.githubusercontent.com/bmrf/tron/master/resources/stage_2_de-bloat/metro/metro_3rd_party_modern_apps_to_target_by_name.ps1' -OutFile 'C:\tools\metro_3rd_party_modern_apps_to_target_by_name.ps1'
@@ -53,5 +57,5 @@
 
 	# Create symbolic links
 	  Invoke-WebRequest 'https://raw.githubusercontent.com/iRobie/New-Computer/master/src/tweaks/Create-Symlinks.bat' -OutFile 'C:\tools\Create-Symlinks.bat'
-	  start-process C:\tools\Create-Symlinks.bat -NoNewWindow -Wait
+	  start-process C:\tools\Create-Symlinks.bat -Wait
 
