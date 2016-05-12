@@ -1,4 +1,3 @@
-
 ## Reduce Windows SXS size
 	if(!(Test-Path -Path "C:\tools\" )){
 		New-Item -ItemType directory -Path "c:\tools\"
