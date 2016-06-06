@@ -11,7 +11,7 @@
 
 # Development
 	cinst sourcetree -y
-	cinst github -y # Caused problems once. Remove if this happens again
+	# cinst github -y # Caused problems with continuing installation
 
 # Digital entertainment
 	cinst calibre -y
