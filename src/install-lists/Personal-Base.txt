@@ -1,8 +1,3 @@
-## These are files I use regardless of what computer I'm on
-# Upgrade Chocolatey
-        cinst chocolatey -y
-        choco upgrade chocolatey -y
-        
 # Development
 	cinst python2 -y
 	cinst visualstudiocode -y
