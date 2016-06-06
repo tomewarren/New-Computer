@@ -7,3 +7,9 @@
   cinst googlechrome -y
   cinst 7zip.install -y
   cinst notepadplusplus -y
+  
+# Upgrade Chocolatey
+        cinst chocolatey -y
+        choco upgrade chocolatey -y
+        
+  if (Test-PendingReboot) { Invoke-Reboot }
