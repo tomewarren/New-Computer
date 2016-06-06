@@ -30,6 +30,8 @@
 
 	Install-ChocolateyPinnedTaskBarItem "$($Boxstarter.programFiles86)\Google\Chrome\Application\chrome.exe"
 
+	Write-host "Performing personalization tweaks. Can appear locked for a few minutes. Starting at: "
+	Get-Date
 	# Apply personalization tweaks
 		if(!(Test-Path -Path "C:\tools\" )){
 			New-Item -ItemType directory -Path "c:\tools\"
