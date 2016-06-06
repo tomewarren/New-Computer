@@ -1,3 +1,5 @@
+## These are files I use regardless of what computer I'm on, but they aren't for computers I support 
+
 # Development
 	cinst python2 -y
 	cinst visualstudiocode -y
