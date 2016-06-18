@@ -19,6 +19,7 @@
 	choco install mediatab -y # Media info in properties
 	cinst mpc-hc -y
 	cinst QuickPar -y
+	cinst mkvtoolnix -y
 
 # Utilities
 	cinst sandboxie -y
