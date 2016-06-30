@@ -15,7 +15,6 @@
 	cinst windirstat -y
 	cinst winscp -y
 	cinst putty.install -y
-	cinst dropbox -y
 	cinst evernote -y
 	cinst lastpass -y
 	cinst sysinternals -y
