@@ -39,10 +39,6 @@
 		Invoke-WebRequest 'https://raw.githubusercontent.com/iRobie/New-Computer/master/src/tweaks/Windows10Tweaks.bat' -OutFile 'C:\tools\Win10tweaks.bat'
 		start-process C:\tools\Win10tweaks.bat -Wait
 
-	# Remove Onedrive
-	  Invoke-WebRequest 'https://raw.githubusercontent.com/iRobie/New-Computer/master/src/tweaks/Remove-Onedrive.bat' -OutFile 'C:\tools\Remove-Onedrive.bat'
-	  start-process C:\tools\Remove-Onedrive.bat -Wait
-
 	# Remove Modern apps
 		Invoke-WebRequest 'https://raw.githubusercontent.com/bmrf/tron/master/resources/stage_2_de-bloat/metro/metro_3rd_party_modern_apps_to_target_by_name.ps1' -OutFile 'C:\tools\metro_3rd_party_modern_apps_to_target_by_name.ps1'
 		Invoke-WebRequest 'https://raw.githubusercontent.com/bmrf/tron/master/resources/stage_2_de-bloat/metro/metro_Microsoft_modern_apps_to_target_by_name.ps1' -OutFile 'C:\tools\metro_Microsoft_modern_apps_to_target_by_name.ps1'
