@@ -17,6 +17,7 @@
 	cinst putty.install -y
 	cinst lastpass -y
 	cinst sysinternals -y
+	cinst boxstarter -y
 
 # Runtimes
 	cinst javaruntime -y
