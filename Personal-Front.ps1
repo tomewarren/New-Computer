@@ -49,6 +49,10 @@ $windowsupdatecmd = "START http://boxstarter.org/package/nr/url?$WindowsUpdatefi
 
 set-content -path $WindowsUpdatePS1 -value $windowsupdatecmd 
 
+# Add instructions for manually running file
+add-content $WindowsUpdatePS1 -value "# To run updates manually, open the following link in a Click-Once compatible browser (IE or Edge):"
+add-content $WindowsUpdatePS1 -value "# http://boxstarter.org/package/nr/url?$WindowsUpdatefile"
+
 ## Run the boxstarter file
 START http://boxstarter.org/package/nr/url?$BoxstarterFile
 
