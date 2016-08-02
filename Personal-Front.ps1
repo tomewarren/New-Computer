@@ -24,7 +24,7 @@
   }
 
   $WindowsUpdatefile = "C:\tools\Boxstarter-Update.txt"
-  $WindowsUpdatePS1 = Join-Path ([Environment]::GetFolderPath("Desktop")) "Run-WindowsUpdates.ps1"
+  $WindowsUpdatePS1 = "C:\tools\Run-WindowsUpdates.ps1
 
   # Create tools directory if Boxstarter didn't already
   if((Test-Path -Path $WindowsUpdatefile )){
@@ -44,10 +44,11 @@
     add-content $WindowsUpdatefile -value ((new-object net.webclient).DownloadString($wusource))
   }
 
-## Create Windows Update powershell
-$windowsupdatecmd = "START http://boxstarter.org/package/nr/url?$WindowsUpdatefile"
 
-set-content -path $WindowsUpdatePS1 -value $windowsupdatecmd 
+## Create Windows Update powershell
+$runwindowsupdatefile = "https://raw.githubusercontent.com/iRobie/New-Computer/master/src/processes/Run-WindowsUpdates.ps1"
+add-content $WindowsUpdatePS1 -value ((new-object net.webclient).DownloadString($runwindowsupdatefile))
+
 
 # Add instructions for manually running file
 add-content $WindowsUpdatePS1 -value "# To run updates manually, open the following link in a Click-Once compatible browser (IE or Edge):"
