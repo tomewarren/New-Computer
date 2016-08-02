@@ -33,7 +33,7 @@ powershell
   }
 
   $WindowsUpdatefile = "C:\tools\Boxstarter-Update.txt"
-  $WindowsUpdatePS1 = "C:\tools\Run-WindowsUpdates.ps1
+  $WindowsUpdatePS1 = "C:\tools\Run-WindowsUpdates.ps1"
 
   # Create tools directory if Boxstarter didn't already
   if((Test-Path -Path $WindowsUpdatefile )){
