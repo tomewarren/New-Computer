@@ -20,6 +20,7 @@
 	cinst mpc-hc -y
 	cinst QuickPar -y
 	cinst mkvtoolnix -y
+	cinst youtube-dl -y
 
 # Utilities
 	cinst sandboxie -y
