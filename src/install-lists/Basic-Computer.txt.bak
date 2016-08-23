@@ -1,0 +1,15 @@
+## No matter what computer, these are useful tools to have
+# Install DotNet
+  cinst DotNet3.5 -y
+  cinst dotnet4.5 -y
+
+#Core utilities
+  cinst googlechrome -y
+  cinst 7zip.install -y
+  cinst notepadplusplus -y
+  
+# Upgrade Chocolatey
+        cinst chocolatey -y
+        choco upgrade chocolatey -y
+        
+  if (Test-PendingReboot) { Invoke-Reboot }

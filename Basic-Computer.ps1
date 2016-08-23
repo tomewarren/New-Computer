@@ -11,8 +11,8 @@
   New-Item -path $BoxstarterFile -type file -force
 
   # List of sources for this machine
-  $sources = @("https://raw.githubusercontent.com/iRobie/New-Computer/master/src/processes/initialize.txt",
-  "https://raw.githubusercontent.com/iRobie/New-Computer/master/src/install-lists/Basic-Computer.txt"
+  $sources = @("https://raw.githubusercontent.com/tomewarren/New-Computer/master/src/processes/initialize.txt",
+  "https://raw.githubusercontent.com/tomewarren/New-Computer/master/src/install-lists/Basic-Computer.txt"
   )
 
   # Generate boxstarter file
@@ -32,8 +32,8 @@
   New-Item -path $WindowsUpdatePS1 -type file -force
 
   # List of sources for this machine
-  $wusources = @("https://raw.githubusercontent.com/iRobie/New-Computer/master/src/processes/WindowsUpdate.txt",
-  "https://raw.githubusercontent.com/iRobie/New-Computer/master/src/processes/finalize.txt"
+  $wusources = @("https://raw.githubusercontent.com/tomewarren/New-Computer/master/src/processes/WindowsUpdate.txt",
+  "https://raw.githubusercontent.com/tomewarren/New-Computer/master/src/processes/finalize.txt"
   )
 
   # Generate boxstarter file
@@ -44,7 +44,7 @@
 
 
 ## Create Windows Update powershell
-$runwindowsupdatefile = "https://raw.githubusercontent.com/iRobie/New-Computer/master/src/processes/Run-WindowsUpdates.ps1"
+$runwindowsupdatefile = "https://raw.githubusercontent.com/tomewarren/New-Computer/master/src/processes/Run-WindowsUpdates.ps1"
 add-content $WindowsUpdatePS1 -value ((new-object net.webclient).DownloadString($runwindowsupdatefile))
 
 
